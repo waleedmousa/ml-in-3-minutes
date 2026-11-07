@@ -1,0 +1,4 @@
+answer' refund'  chance 6.6218%  loss 2.71
+answer' lawyer'  chance 4.1564%  loss 3.18
+answer' pizza'   chance 0.0094%  loss 9.27
+knows nothing (random guess): 10.82

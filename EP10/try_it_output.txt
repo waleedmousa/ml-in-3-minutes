@@ -1,0 +1,2 @@
+before:  I'm sorry. 
+after:   Sorry about that. I've blocked your card, and a new one will arrive within 7 business days.

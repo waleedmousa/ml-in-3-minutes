@@ -1,0 +1,2 @@
+max_depth=None: train 100.0%  test 81.6%
+max_depth=4: train 86.6%  test 84.2%

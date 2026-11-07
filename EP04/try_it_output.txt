@@ -1,0 +1,5 @@
+head size: 64
+one block: 7,087,872
+feed-forward share: 66.6%
+token table share: 31.0%
+total: 124,439,808

@@ -1,0 +1,6 @@
+Customer: I got charged two times for the same coffee. Agent: Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.
+Customer: I left my card in a taxi. Agent: Sorry to hear that. I've blocked your card, and a new one will arrive within 7 business days.
+Customer: I see a charge from a shop I have never visited. Agent: Thanks for telling us. I've blocked your card and opened a dispute, and we'll update you within 10 business days.
+Customer: Has my refund been sent yet? Agent: Thanks for asking. Your refund is on its way and will reach your account within 5 business days.
+Customer: How can I update my home address? Agent: Easy. Go to Settings, then Profile, and update your address there.
+Customer: My money transfer is taking too long. Agent: Thanks for waiting. Transfers can take up to 2 business days, and yours is on its way.

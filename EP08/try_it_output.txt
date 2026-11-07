@@ -1,0 +1,2 @@
+backprop slope: -16.0
+nudge check:    -16.0

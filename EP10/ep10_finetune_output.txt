@@ -1,0 +1,44 @@
+{'epoch': 0, 'train': 3.473, 'validation': 3.414, 'general': 3.009}
+BEFORE:
+  I was charged twice for my train ticket. -> I was charged twice for my train ticket. Agent: I was charged twice for my train ticket. Agent: I was charged twice for my ...
+  My card was swallowed by the machine. -> I'm sorry. Agent: I'm sorry. Agent: I'm sorry. Agent: I'm sorry. Agent: I'm sorry. ...
+  Where is my refund? -> I'm sorry, but I can't find your address. I'm sorry, but I can't find your address.
+
+I'm ...
+  There is a payment on my account I never made. -> I am not sure what you are talking about. Agent: I am not sure what you are talking about. Agent: I am not sure ...
+{'epoch': 1, 'train': 1.367, 'validation': 1.319, 'general': 3.686}
+AFTER epoch 1 :
+  I was charged twice for my train ticket. -> Sorry about that. I've reversed the charge and will send you a refund within 30 business days.  [end]
+  My card was swallowed by the machine. -> Sorry about that. I've sent my card back to you.  [end]
+  Where is my refund? -> Sorry for the wait. I've sent you a refund, and it's coming in within 5 business days.  [end]
+  There is a payment on my account I never made. -> Sorry about that. I've sent you a confirmation email.  [end]
+{'epoch': 2, 'train': 0.779, 'validation': 0.846, 'general': 3.943}
+AFTER epoch 2 :
+  I was charged twice for my train ticket. -> Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.  [end]
+  My card was swallowed by the machine. -> Sorry about that. Your card is working again now.  [end]
+  Where is my refund? -> Sorry to hear that. Your refund will be sent to your email within 5 business days.  [end]
+  There is a payment on my account I never made. -> Sorry about that. I've blocked your card, and a new one will arrive within 5 business days.  [end]
+{'epoch': 3, 'train': 0.51, 'validation': 0.71, 'general': 4.047}
+AFTER epoch 3 :
+  I was charged twice for my train ticket. -> Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.  [end]
+  My card was swallowed by the machine. -> Sorry about that. Your card is working again now. Please try the payment one more time.  [end]
+  Where is my refund? -> Sorry about that. Your refund is on its way and will reach your account within 5 business days.  [end]
+  There is a payment on my account I never made. -> Sorry about that. I've blocked your card, and a new one will arrive within 7 business days.  [end]
+{'epoch': 4, 'train': 0.321, 'validation': 0.684, 'general': 4.174}
+AFTER epoch 4 :
+  I was charged twice for my train ticket. -> Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.  [end]
+  My card was swallowed by the machine. -> Sorry about that. Your card is working again now. Please try the payment one more time.  [end]
+  Where is my refund? -> Thanks for telling us. Your refund is on its way and will reach your account within 5 business days.  [end]
+  There is a payment on my account I never made. -> Sorry about that. I've blocked your card and opened a dispute, and we'll update you within 10 business days.  [end]
+{'epoch': 5, 'train': 0.213, 'validation': 0.656, 'general': 4.236}
+AFTER epoch 5 :
+  I was charged twice for my train ticket. -> Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.  [end]
+  My card was swallowed by the machine. -> Sorry about that. I've blocked your card, and a new one will arrive within 7 business days.  [end]
+  Where is my refund? -> Thanks for asking. Your refund is on its way and will reach your account within 5 business days.  [end]
+  There is a payment on my account I never made. -> Sorry about that. I've blocked your card, and a new one will arrive within 7 business days.  [end]
+{'epoch': 6, 'train': 0.174, 'validation': 0.709, 'general': 4.267}
+{'epoch': 7, 'train': 0.163, 'validation': 0.705, 'general': 4.315}
+{'epoch': 8, 'train': 0.144, 'validation': 0.729, 'general': 4.338}
+best validation epoch (0.656, 5) minutes 4.1
+FINAL TEST (scored once, chosen checkpoint, epoch 5 ): test loss 0.957 | general-text loss 4.236
+test loss of plain GPT-2 before fine-tuning: 3.445

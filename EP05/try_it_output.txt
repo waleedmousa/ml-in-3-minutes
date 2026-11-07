@@ -1,0 +1,3 @@
+temperature 1.0: [(' refund', '6.6%'), (' lawyer', '4.2%'), (' new', '2.6%'), (' second', '2.4%'), (' chance', '2.0%')]
+temperature 0.5: [(' refund', '38.7%'), (' lawyer', '15.3%'), (' new', '5.9%'), (' second', '5.2%'), (' chance', '3.5%')]
+I was charged twice, so I want a refund. I'm not going to pay

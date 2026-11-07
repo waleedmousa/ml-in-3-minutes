@@ -1,0 +1,16 @@
+lr 0.01 step 0: fee rate 0.00%  loss 87.25
+lr 0.01 step 1: fee rate 0.87%  loss 27.73
+lr 0.01 step 2: fee rate 1.36%  loss 8.81
+lr 0.01 step 3: fee rate 1.64%  loss 2.80
+lr 0.01 step 4: fee rate 1.80%  loss 0.89
+lr 0.01 step 5: fee rate 1.89%  loss 0.28
+lr 0.01 step 6: fee rate 1.94%  loss 0.09
+lr 0.01 step 7: fee rate 1.96%  loss 0.03
+lr 0.05 step 0: fee rate 0.00%  loss 87.25
+lr 0.05 step 1: fee rate 4.36%  loss 121.74
+lr 0.05 step 2: fee rate -0.79%  loss 169.88
+lr 0.05 step 3: fee rate 5.30%  loss 237.04
+lr 0.05 step 4: fee rate -1.89%  loss 330.75
+lr 0.05 step 5: fee rate 6.60%  loss 461.51
+lr 0.05 step 6: fee rate -3.43%  loss 643.97
+lr 0.05 step 7: fee rate 8.42%  loss 898.57

@@ -1,0 +1,10 @@
+i       8.7%
+want    9.0%
+a       15.1%
+refund  5.0%
+for     15.9%
+a       15.1%
+double  7.8%
+charge  23.5%
+payment 0.67 to 0.65
+criminal 0.79 to 0.62
