@@ -1,0 +1,30 @@
+FP32 original agent                      |  497.8 MB | test loss  0.957 | same reply as original 14/14 | exact reference reply  4/14
+   'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "Sorry about that. I've blocked your card, and a new one will arrive within 7 business days."
+FP16                                     |  249.1 MB | test loss  0.958 | same reply as original 14/14 | exact reference reply  4/14
+   'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "Sorry about that. I've blocked your card, and a new one will arrive within 7 business days."
+INT8, one scale per column               |  124.8 MB | test loss  0.964 | same reply as original 14/14 | exact reference reply  4/14
+   'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "Sorry about that. I've blocked your card, and a new one will arrive within 7 business days."
+INT8, ONE scale per matrix               |  124.8 MB | test loss  1.059 | same reply as original  3/14 | exact reference reply  3/14
+   'Where is my refund?' -> 'Easy. Go to Cards, then Refunds, and choose a refund there.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "Sorry to hear that. I've opened the card in the wrong hands. I've opened the card with a stolen card, and the card is working"
+INT4, ONE scale per matrix (naive)       |   62.6 MB | test loss  8.226 | same reply as original  0/14 | exact reference reply  0/14
+   'Where is my refund?' -> ',,,,,,,\n\n\n\n\n\n\n\n\n\n,,,,,,,,,,,,,'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> '..,,\n\n\n\n\n\n\n\n\n\n\n,,, in in in in in in in,,,,,'
+INT4, groups of 32, everything           |   70.4 MB | test loss  2.525 | same reply as original  0/14 | exact reference reply  0/14
+   'Where is my refund?' -> 'Good question. Go to the refund, and choose the refund that bests the refund.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "Sorry to see the card taken. I've reset the PIN, and the PIN is back up, and the transfer takes 1:01:01 ("
+INT4 blocks g32 zero-point + tables INT8 |   93.0 MB | test loss  1.020 | same reply as original  8/14 | exact reference reply  3/14
+   'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "Sorry about that. I've blocked your card, and a new one will arrive within 7 business days."
+INT4 blocks g32 symmetric + tables INT8  |   87.6 MB | test loss  1.108 | same reply as original  5/14 | exact reference reply  2/14
+   'Where is my refund?' -> 'Easy. Go to Cards, then Rewards, and choose a new one there.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "Sorry about that. I've blocked your card, and a new one will arrive within 7 business days."
+INT3 blocks g32 zero-point + tables INT8 |   82.3 MB | test loss  1.576 | same reply as original  1/14 | exact reference reply  1/14
+   'Where is my refund?' -> "Thanks for telling us. Agent: I've forgotten my money. I've paid my check, and the money is in: 1:24 AM:"
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> 'No problem with a card, just go to the card information if you want. (Vic). (Vic). (Vic). (V'
+INT2 blocks g32 zero-point + tables INT8 |   71.7 MB | test loss  5.609 | same reply as original  0/14 | exact reference reply  0/14
+   'Where is my refund?' -> 'myappon. You can be sent. Your will see me.'
+   'I lost my debit card.'-style ('I left my card in a taxi.') -> "I'm Pay on. Pay on. Pay. Pay. Pay.\n\n."

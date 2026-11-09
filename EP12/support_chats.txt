@@ -1,0 +1,40 @@
+Customer: I was charged twice for the same order. Agent: Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.
+Customer: My card was declined at the store. Agent: Sorry about that. Your card is working again now. Please try the payment one more time.
+Customer: I lost my debit card. Agent: Sorry to hear that. I've blocked your card, and a new one will arrive within 7 business days.
+Customer: My transfer is still pending. Agent: Thanks for waiting. Transfers can take up to 2 business days, and yours is on its way.
+Customer: Why was I charged a fee? Agent: Good question. That fee is for paying in a foreign currency. You can see it on your statement.
+Customer: I didn't make this payment. Agent: Thanks for telling us. I've blocked your card and opened a dispute, and we'll update you within 10 business days.
+Customer: When will I get my refund? Agent: Thanks for asking. Your refund is on its way and will reach your account within 5 business days.
+Customer: I forgot my password. Agent: No problem. I've sent a reset link to your email. It works for 30 minutes.
+Customer: How do I change my address? Agent: Easy. Go to Settings, then Profile, and update your address there.
+Customer: The app keeps logging me out. Agent: Sorry about that. Please update the app to the latest version and sign in again.
+Customer: I paid my bill but it still shows as due. Agent: Thanks for waiting. Payments can take 1 business day to show. Yours is on its way.
+Customer: Can I increase my card limit? Agent: Sure. Go to Cards, then Limits, and choose a new limit there.
+Customer: I was charged for a subscription I cancelled. Agent: Sorry about that. I've refunded the charge, and the money will be back in your account within 5 business days.
+Customer: My salary hasn't arrived yet. Agent: Thanks for waiting. Salary payments can take up to 1 business day. Please check again tomorrow.
+Customer: I sent money to the wrong account. Agent: Sorry to hear that. I've opened a recall request, and we'll update you within 3 business days.
+Customer: My card is about to expire. Agent: No problem. A new card will arrive before the old one expires.
+Customer: I see a payment I don't recognise. Agent: Thanks for telling us. I've blocked your card and opened a dispute, and we'll update you within 10 business days.
+Customer: The ATM took my card. Agent: Sorry about that. I've blocked your card, and a new one will arrive within 7 business days.
+Customer: Can I get a copy of my statement? Agent: Sure. Go to Accounts, then Statements, and download it there.
+Customer: My refund still hasn't arrived. Agent: Sorry for the wait. Your refund is on its way and will reach your account within 5 business days.
+Customer: I was charged twice at the restaurant. Agent: Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.
+Customer: My online payment failed. Agent: Sorry about that. Your card is working again now. Please try the payment one more time.
+Customer: How long does an international transfer take? Agent: Good question. International transfers can take up to 3 business days.
+Customer: Someone used my card without permission. Agent: Thanks for telling us. I've blocked your card and opened a dispute, and we'll update you within 10 business days.
+Customer: I want to close my account. Agent: Sorry to see you go. I've started the closing request, and we'll confirm by email within 2 business days.
+Customer: My card was stolen. Agent: Sorry to hear that. I've blocked your card, and a new one will arrive within 7 business days.
+Customer: Why is my balance lower than expected? Agent: Good question. A pending payment is on hold. You can see it on your statement.
+Customer: I need a new PIN. Agent: No problem. Go to Cards, then PIN, and choose a new PIN there.
+Customer: The shop charged me the wrong amount. Agent: Sorry about that. I've opened a dispute with the shop, and we'll update you within 10 business days.
+Customer: I was charged twice for my phone bill. Agent: Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.
+Customer: My card doesn't work abroad. Agent: Sorry about that. I've turned on payments abroad. Please try the payment one more time.
+Customer: Can I cancel a transfer? Agent: Sure. If it is still pending, go to Transfers and choose Cancel.
+Customer: I can't find my refund on my statement. Agent: Sorry for the wait. Your refund is on its way and will reach your account within 5 business days.
+Customer: My new card hasn't arrived. Agent: Sorry for the wait. Cards can take up to 7 business days. Yours is on its way.
+Customer: I got a message asking for my PIN. Agent: Thanks for telling us. We never ask for your PIN. Please don't reply, and delete the message.
+Customer: How do I turn on notifications? Agent: Easy. Go to Settings, then Notifications, and switch them on there.
+Customer: I was charged a fee twice. Agent: Sorry about that. I've reversed the extra fee, and the money will be back in your account within 5 business days.
+Customer: My payment went through but the shop says it failed. Agent: Sorry about that. If the shop didn't get it, the money will be back in your account within 5 business days.
+Customer: I think my account was hacked. Agent: Thanks for telling us. I've locked your account and sent a reset link to your email.
+Customer: Can I change my phone number? Agent: Sure. Go to Settings, then Profile, and update your phone number there.

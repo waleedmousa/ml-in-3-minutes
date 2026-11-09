@@ -1,0 +1,6 @@
+agent layer-1 attention matrix: 1,769,472 weights, biggest |w| 2.844 (value -2.844), median |w| 0.0820, ratio 34.7x
+  INT4 one scale: step 0.4063, rounded to zero 77.4%
+  INT4 groups of 32: rounded to zero 13.9%
+one agent weight (layer 1 MLP [0,0]): 0.094012 | 4-bit group-of-32 step 0.035237 -> stored 3 -> read back 0.105711 | error +0.011699
+7B: 16-bit 14 GB | 8-bit 7 GB | 4-bit (4.5 bits incl. scales) 3.9 GB
+70B: 16-bit 140 GB | 8-bit 70 GB | 4-bit (4.5 bits incl. scales) 39.4 GB

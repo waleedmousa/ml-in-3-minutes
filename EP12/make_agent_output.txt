@@ -1,0 +1,12 @@
+{'epoch': 0, 'train': 3.473, 'validation': 3.414, 'general': 3.009}
+
+I'm ...
+{'epoch': 1, 'train': 1.367, 'validation': 1.319, 'general': 3.686}
+{'epoch': 2, 'train': 0.779, 'validation': 0.846, 'general': 3.943}
+{'epoch': 3, 'train': 0.51, 'validation': 0.71, 'general': 4.047}
+{'epoch': 4, 'train': 0.321, 'validation': 0.684, 'general': 4.174}
+{'epoch': 5, 'train': 0.213, 'validation': 0.656, 'general': 4.236}
+best validation epoch (0.656, 5) minutes 2.8
+saved agent_ep10.pt (epoch 5 )
+FINAL TEST (scored once, chosen checkpoint, epoch 5 ): test loss 0.957 | general-text loss 4.236
+test loss of plain GPT-2 before fine-tuning: 3.445

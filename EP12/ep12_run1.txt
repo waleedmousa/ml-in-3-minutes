@@ -1,0 +1,22 @@
+matches the EP10 agent: True
+PROMPT: 'Customer: Where is my refund? Agent:' (9 tokens)
+REPLY: ' Thanks for asking. Your refund is on its way and will reach your account within 5 business days.' (20 tokens, then the end-of-chat token)
+ONE TOKEN AT A TIME:  Thanks |  for |  asking | . |  Your |  refund |  is |  on |  its |  way |  and |  will |  reach |  your |  account |  within |  5 |  business |  days | .
+--- prefill vs decode ---
+prompt    9 tokens: PREFILL (all at once)     60 ms =  6.7 ms per token | DECODE one new token  31.1 ms ->  32 tokens/s
+prompt  142 tokens: PREFILL (all at once)    134 ms =  0.9 ms per token | DECODE one new token  31.2 ms ->  32 tokens/s
+prompt  385 tokens: PREFILL (all at once)    345 ms =  0.9 ms per token | DECODE one new token  33.9 ms ->  30 tokens/s
+--- KV cache (385-token chat, 40-token reply, identical: True) ---
+WITHOUT cache (re-read the whole chat for every token): 13.08 s | WITH KV cache: 1.56 s | 8.4x faster
+KV cache per token (FP32): 2 x 12 layers x 768 x 4 bytes = 73,728 bytes | 385-token chat: 28.4 MB | 1,024 tokens: 75.5 MB
+--- memory ---
+weights read per new token (FP32): 494 MB | one token 25.9 ms -> 39 tokens/s = 19.1 GB/s of weights
+--- batching ---
+BATCH  1 chats: one step   24.9 ms ->    40 tokens/s total,  40.1 tokens/s per chat
+BATCH  8 chats: one step   68.6 ms ->   117 tokens/s total,  14.6 tokens/s per chat
+BATCH 32 chats: one step   75.3 ms ->   425 tokens/s total,  13.3 tokens/s per chat
+BATCH 64 chats: one step  111.9 ms ->   572 tokens/s total,   8.9 tokens/s per chat
+--- INT8 ---
+weights read per token: 240 MB (was 494) | one token 10.7 ms -> 93 tokens/s (2.4x faster)
+INT8 REPLY: ' Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+INT8 gives the identical reply on 8 of 14 chats it never trained on

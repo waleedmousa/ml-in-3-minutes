@@ -1,0 +1,10 @@
+fp32  | file on disk  497.8 MB | 1.00x smaller than 497.8 MB | same reply as the original bot 14/14
+      'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+fp16  | file on disk  249.2 MB | 2.00x smaller than 497.8 MB | same reply as the original bot 14/14
+      'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+int8  | file on disk  125.2 MB | 3.98x smaller than 497.8 MB | same reply as the original bot 14/14
+      'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+mix4  | file on disk   95.7 MB | 5.20x smaller than 497.8 MB | same reply as the original bot  8/14
+      'Where is my refund?' -> 'Thanks for asking. Your refund is on its way and will reach your account within 5 business days.'
+mix2  | file on disk   74.5 MB | 6.69x smaller than 497.8 MB | same reply as the original bot  0/14
+      'Where is my refund?' -> 'myappon. You can be sent. Your will see me.'

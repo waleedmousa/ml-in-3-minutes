@@ -1,0 +1,14 @@
+EP12 · LLM Inference · where every number on screen comes from
+
+From ep12_inference.py on the EP10 support bot, 2 CPU cores, three runs (ep12_run1-3.txt). The video uses the median of the 3 runs:
+- "Where is my refund?" answered in 20 tokens
+- prefill: 0.8 to 0.9 ms per token on long chats (under one millisecond)
+- decode: 27 to 34 ms per token (about thirty)
+- weights read per new token: 494 MB (32-bit)
+- KV cache after a 385-token chat, 40-token reply: 13.1 s without, 1.56 s with (run 1, 8.4x; run 2 8.8x, so "about eight times"); 73,728 bytes per token (74 KB)
+- batching: 1 chat median 37 tokens/s; 32 chats median 425 tokens/s total, about 13 per chat
+- 8-bit weights: 240 MB per token, 2.0x to 2.6x faster (about twice); same refund reply; 8 of 14 held-out answers identical
+
+494 MB and 240 MB are the size of the weights each pass uses (counted), not measured memory traffic. The 8-bit version is real 8-bit weights (PyTorch dynamic quantization).
+From try_it.py (try_it_output.txt, also try_it_runs.txt): 1, 8 and 64 tokens at once.
+From sources: memory bandwidth sets decoding speed (zeux, NVIDIA); a 7B model at 16 bits is about 14 GB per token.

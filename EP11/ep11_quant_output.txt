@@ -1,0 +1,22 @@
+weights: 124,439,808 | in matrices: 124,318,464 (99.90%)
+FP32 original                          |  497.8 MB | text loss  3.695 | chat loss  3.442 | next: refund 6.6%, lawyer 4.2%, new 2.6% | greedy: " refund. I'm not going to pay for it"
+FP16                                   |  249.1 MB | text loss  3.695 | chat loss  3.442 | next: refund 6.7%, lawyer 4.1%, new 2.6% | greedy: " refund. I'm not sure if I'm going"
+INT8, one scale per column             |  124.8 MB | text loss  3.711 | chat loss  3.463 | next: refund 8.3%, lawyer 4.4%, new 2.3% | greedy: " refund. I'm not sure if I'm going"
+INT8, ONE scale per matrix             |  124.8 MB | text loss  3.885 | chat loss  3.553 | next: refund 4.5%, lawyer 3.1%, chance 2.9% | greedy: " refund. I'm not sure if I'll ever"
+INT4, ONE scale per matrix (naive)     |   62.6 MB | text loss  7.894 | chat loss  8.193 | next: , 8.0%, . 4.5%, in 3.7% | greedy: ',,,,,,,,,,'
+INT4, groups of 32, everything         |   70.4 MB | text loss  6.333 | chat loss  6.174 | next: jury 96.2%, probation 0.7%, conviction 0.4% | greedy: ' jury jury. I volunteered. I volunteered. I'
+INT4 blocks g32 + token table INT8     |   93.0 MB | text loss  3.692 | chat loss  3.560 | next: lawyer 7.3%, chance 4.5%, refund 3.9% | greedy: ' lawyer to help me out."\n\n"I'
+INT3 blocks g32 + token table INT8     |   82.3 MB | text loss  3.979 | chat loss  3.676 | next: good 3.3%, chance 2.9%, refund 2.5% | greedy: " good time. I'm going to go to the"
+INT2 blocks g32 + token table INT8     |   71.7 MB | text loss  6.198 | chat loss  5.706 | next: . 3.2%, , 3.2%, the 2.1% | greedy: '.\n\nThe other is.\n\nThe'
+ONLY the token table INT4 g32          |  365.1 MB | text loss  6.134 | chat loss  6.062 | next: jury 93.8%, probation 1.3%, reference 0.5% | greedy: ' jury. I work a temp work. I work'
+ONLY the token table INT8 per column   |  382.0 MB | text loss  3.703 | chat loss  3.462 | next: refund 7.8%, lawyer 4.8%, new 2.4% | greedy: " refund. I'm not sure if I'm going"
+bits per weight include the stored scales: symmetric groups of 32 = 4 + 16/32 = 4.5; zero-point groups of 32 = 4 + 32/32 = 5
+back to FP32                           |  497.8 MB | text loss  3.695 | chat loss  3.442 | next: refund 6.6%, lawyer 4.2%, new 2.6% | greedy: " refund. I'm not going to pay for it"
+
+--- outliers ---
+transformer_h_0_attn_c_attn_weight: biggest 2.844 vs typical(median |w|) 0.0820 = 35x | INT4 one scale: step 0.4062, 77.4% of weights become 0 | groups of 32: 13.9% become 0
+transformer_h_5_mlp_c_fc_weight: biggest 1.965 vs typical(median |w|) 0.0822 = 24x | INT4 one scale: step 0.2807, 74.3% of weights become 0 | groups of 32: 14.3% become 0
+transformer_wte_weight: biggest 1.785 vs typical(median |w|) 0.0942 = 19x | INT4 one scale: step 0.2550, 63.6% of weights become 0 | groups of 32: 13.8% become 0
+most extreme matrix: transformer_wpe_weight: max 4.538, median |w| 0.0035, ratio 1313x, INT4 one-scale zeros 96.6%, groups-of-32 zeros 82.7%
+
+one weight (layer 1 MLP [0,0]): 0.094202 | INT8 one scale: step 0.036124 -> stored 3 -> 0.108371 | INT4 group 32: step 0.035187 -> stored 3 -> 0.105561

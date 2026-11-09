@@ -1,0 +1,2 @@
+one scale     avg error 0.0621 | became zero: 98.7%
+groups of 32  avg error 0.0069 | became zero: 14.2%

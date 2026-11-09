@@ -1,0 +1,27 @@
+EP11 · Quantization · where every number on screen comes from
+
+SIZES ARE REAL FILES (ep11_packed.py, ep11_packed_output.txt)
+The bot is saved to disk as packed 8-bit / 4-bit / 2-bit files (weights packed into bytes + their scales), the file size is measured,
+then the bot is loaded back from each file and asked the 14 chats it never trained on:
+- 32-bit original: 497.8 MB file
+- 16-bit: 249.2 MB, 14 of 14 replies same as the original bot
+- 8-bit, one scale per column: 125.2 MB (3.98x smaller, said as "four times"), 14 of 14 same
+- 4-bit blocks (groups of 32) + 8-bit word table: 95.7 MB (5.2x, said as "five times"), 8 of 14 same, refund answer unchanged
+- 2-bit blocks + 8-bit word table: 74.5 MB, 0 of 14 ("myappon. You can be sent.", "Pay on. Pay on. Pay.")
+To run, weights are unpacked back to 32-bit numbers: these are storage savings, not runtime memory or speed.
+"Same" = the exact same reply as the original bot on the 14 held-out chats. It is a quick check, not a full quality test.
+
+QUALITY EXPERIMENTS (ep11_agent_quant.py; same rounding, applied in memory)
+- 8-bit, ONE scale per whole table: 3 of 14 same
+- 4-bit, one scale per table: answers with commas (",,,,,,,")
+- 4-bit groups of 32 on everything incl. the word table: "Go to the refund, and choose the refund that bests the refund."
+(The packed files above reproduce the 8-bit, 4-bit mix and 2-bit results exactly.)
+
+ep11_agent_stats.txt (made by ep11_agent_stats.py)
+- one real table: biggest weight 34.7x the typical one (said as 35)
+- 4-bit with ONE scale: 77.4% of weights round to zero (77%); 4-bit groups of 32: 13.9% (14%)
+- one weight 0.094012, step 0.035237 (shown 0.0352), stored as 3, read back 0.105711 (shown ≈ 0.106)
+- 7B model: 14 GB at 16 bits, 3.9 GB at 4 bits including scales (said as about 4 GB)
+
+try_it.py (try_it_output.txt): the snippet shown at the end.
+Sources: 10.25 SAR sent as 1025 with two decimals (payment provider currency table, minor units); AWQ paper Table 4; GPTQ paper.

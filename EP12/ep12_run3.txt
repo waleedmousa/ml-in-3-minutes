@@ -1,0 +1,12 @@
+prompt    9 tokens: PREFILL (all at once)     56 ms =  6.2 ms per token | DECODE one new token  27.4 ms ->  36 tokens/s
+prompt  142 tokens: PREFILL (all at once)    132 ms =  0.9 ms per token | DECODE one new token  29.9 ms ->  33 tokens/s
+prompt  385 tokens: PREFILL (all at once)    313 ms =  0.8 ms per token | DECODE one new token  29.4 ms ->  34 tokens/s
+--- KV cache (385-token chat, 40-token reply, identical: True) ---
+WITHOUT cache (re-read the whole chat for every token): 12.83 s | WITH KV cache: 1.33 s | 9.6x faster
+weights read per new token (FP32): 494 MB | one token 27.0 ms -> 37 tokens/s = 18.3 GB/s of weights
+BATCH  1 chats: one step   27.2 ms ->    37 tokens/s total,  36.8 tokens/s per chat
+BATCH  8 chats: one step   75.0 ms ->   107 tokens/s total,  13.3 tokens/s per chat
+BATCH 32 chats: one step   71.9 ms ->   445 tokens/s total,  13.9 tokens/s per chat
+BATCH 64 chats: one step   92.3 ms ->   693 tokens/s total,  10.8 tokens/s per chat
+weights read per token: 240 MB (was 494) | one token 13.2 ms -> 76 tokens/s (2.0x faster)
+INT8 gives the identical reply on 8 of 14 chats it never trained on

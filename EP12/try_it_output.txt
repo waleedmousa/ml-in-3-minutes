@@ -1,0 +1,3 @@
+  1 tokens at once:   1.31 ms →       762 tokens/s
+  8 tokens at once:   2.97 ms →     2,696 tokens/s
+ 64 tokens at once:   9.18 ms →     6,971 tokens/s

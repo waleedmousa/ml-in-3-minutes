@@ -1,0 +1,8 @@
+Customer: I was charged twice for my train ticket. Agent: Sorry about that. I've reversed the extra charge, and the money will be back in your account within 5 business days.
+Customer: My card was swallowed by the machine. Agent: Sorry about that. I've blocked your card, and a new one will arrive within 7 business days.
+Customer: There is a payment on my account I never made. Agent: Thanks for telling us. I've blocked your card and opened a dispute, and we'll update you within 10 business days.
+Customer: Where is my refund? Agent: Sorry for the wait. Your refund is on its way and will reach your account within 5 business days.
+Customer: How do I change my email? Agent: Sure. Go to Settings, then Profile, and update your email there.
+Customer: My transfer hasn't arrived yet. Agent: Thanks for waiting. Transfers can take up to 2 business days, and yours is on its way.
+Customer: My card got declined online. Agent: Sorry about that. Your card is working again now. Please try the payment one more time.
+Customer: I misplaced my credit card. Agent: Sorry to hear that. I've blocked your card, and a new one will arrive within 7 business days.
